@@ -5,7 +5,8 @@ USER root
 
 # Install additional PHP extensions needed for Laravel
 RUN apk add --no-cache \
-    php84-iconv
+    php84-iconv \
+    php84-simplexml
 
 # Install composer from the official image
 COPY --from=composer /usr/bin/composer /usr/bin/composer
